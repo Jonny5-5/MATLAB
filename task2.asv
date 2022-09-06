@@ -54,22 +54,13 @@ sTopGun = [ ...
 
 audiowrite('topgun.wav', sTopGun, 1/Ts);
 
-fprintf("Starting the recording...\nReading in 15 seconds of data...\n");
-Fs = 44100;
-nBits = 16; seconds = 15;
+fprintf("Starting the recording...\nReading in 5 seconds of data...\n");
+size = 44100;
+nBits = 16; seconds = 5;
 
-recorder = audiorecorder(Fs, nBits, 1);
+recorder = audiorecorder(size, nB, 1);
 recordblocking(recorder, seconds);
 stop(recorder);
 
-% player = audioplayer(recorder);
-% play(player);
-
-
-data = getaudiodata(recorder, "int16");
-plot(data);
-
-player = audioplayer(data, Fs);
+player = audioplayer(recorder);
 play(player);
-
-
