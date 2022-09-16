@@ -30,7 +30,7 @@ end
 autoSum = 0; peakSum = 0;
 peak = 0; peaksFound = 0;
 allThePeaks = [];
-attenuation = 0.9;
+attenuation = 0.8;
 for k = 30:maxAdvance
     
     autoSum = 0;
