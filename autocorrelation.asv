@@ -65,4 +65,10 @@ function freq = autocorrelation(soundFile)
 
 end
 
+function newSignal = makeSignal(f, t)
+    
+    
+    
+    
+end
 
