@@ -30,11 +30,11 @@ t16 = 0:Ts:T16-Ts;
 t32 = 0:Ts:T32-Ts;
 pause = cos(pi/2*t32);
 % Notes
-D = 293.66;
-Fs = 369.994;
-G = 392.00;
-E = 329.63;
-A = 220.00;
+D = 293.66 * 2;
+Fs = 369.994 * 2;
+G = 392.00 * 2;
+E = 329.63 * 2;
+A = 220.00 * 2;
 % The actual wave
 sTopGun = [ ...
     cos(2*pi*Fs*t1)/3 + cos(2*pi*D*t1)/3 + cos(2*pi*A*t1)/3 ...
