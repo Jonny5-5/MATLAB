@@ -5,7 +5,7 @@ function makeSignal(fr)
     sampleRate = 44100;
     t = 0:1/sampleRate:0.3;
     wave = sin(2*pi*fr*t);
-    fileName = sprintf("%shz.wav", wave, sampleRate);
+    fileName = sprintf("%d_hz.wav", wave, sampleRate);
     audiowrite(fileName, wave, sampleRate);
     
 end

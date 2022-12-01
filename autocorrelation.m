@@ -1,4 +1,13 @@
 function freq = autocorrelation(soundFile)
+    
+
+% Here is stuff for the FFT
+%[Y, Fs] = audioread("a_440_tone.wav");
+%n = length(Y);
+%f = (0:n-1)*(Fs/n);
+%F = fft(Y);
+%plot(f, abs(F));
+
     % read in the sound file
     % [Y, Fs] = audioread(soundFile);
     
@@ -16,7 +25,7 @@ function freq = autocorrelation(soundFile)
     
     [Y, Fs] = audioread(soundFile);
     % add white noise
-    Y = awgn(Y,10, 'measured');
+    % Y = awgn(Y,10, 'measured');
     autoSum1 = 0;
     windowSize = 1200;
     lowestFrequencyToDetecy = 30; % in Hz
@@ -64,5 +73,7 @@ function freq = autocorrelation(soundFile)
     fprintf("As far as I can guess, the Frequency is %f3\n\n", freq);
 
 end
+
+
 
 
